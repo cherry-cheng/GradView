@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--头部-->
+    <RelativeLayout
+        android:id="@+id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGreen"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:gravity="center_horizontal"
+        android:paddingRight="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="18dp"
+            android:text="360安全卫士"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/textView"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/topLeft"
+            android:layout_toEndOf="@+id/topLeft"/>
+
+
+        <ImageView
+            android:id="@+id/topLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/top_left" />
+
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/topRight"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:src="@mipmap/top_right"/>
+
+    <!--中间分数-->
+    <RelativeLayout
+        android:id="@+id/centerRelativeLayout"
+        android:layout_below="@id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:background="@color/colorGreen"
+        android:layout_height="200dp">
+
+        <TextView
+            android:id="@+id/TextViewScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:text="100"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="100dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_alignTop="@id/TextViewScore"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/TextViewScore"
+            android:text="分"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+    <!--底部-->
+    <LinearLayout
+        android:background="@color/colorGrey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageButton
+                android:background="@color/colorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@mipmap/bottom_1_on" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorGreen"
+                android:layout_marginBottom="2dp"
+                android:text="常用功能" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageButton
+                android:background="@color/colorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@mipmap/bottom_2_off" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="2dp"
+                android:text="软件管理" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageButton
+                android:background="@color/colorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@mipmap/bottom_3_off" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="2dp"
+                android:text="安全防护" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <ImageButton
+                android:background="@color/colorGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:src="@mipmap/bottom_4_off" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_marginBottom="2dp"
+                android:text="隐私保护" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
