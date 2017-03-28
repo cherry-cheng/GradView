@@ -8,53 +8,101 @@
     <RelativeLayout
         android:id="@+id/topRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:background="@color/colorGreen"
         android:orientation="horizontal"
         android:paddingTop="3dp"
         android:paddingBottom="3dp"
         android:gravity="center_horizontal"
-        android:paddingRight="3dp">
+        android:paddingRight="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <ImageView
+            android:id="@+id/topLeft"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="12dp"
+            android:src="@mipmap/top_left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:text="360安全卫士"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="11dp"
             android:id="@+id/textView"
-            android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/topLeft"
-            android:layout_toEndOf="@+id/topLeft"/>
-
-
-        <ImageView
-            android:id="@+id/topLeft"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/top_left" />
-
-
+            android:layout_toEndOf="@+id/topLeft"
+            android:layout_marginStart="11dp" />
 
 
     </RelativeLayout>
     <ImageView
         android:id="@+id/topRight"
         android:layout_alignParentRight="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="3dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="11dp"
         android:src="@mipmap/top_right"/>
+
+    <!--过渡线-->
+    <View
+        android:id="@+id/topToCenterLine"
+        android:layout_below="@+id/topRelativeLayout"
+        android:layout_width="match_parent"
+        android:background="@color/colorGreenDrak"
+        android:layout_height="1px"/>
 
     <!--中间分数-->
     <RelativeLayout
         android:id="@+id/centerRelativeLayout"
-        android:layout_below="@id/topRelativeLayout"
+        android:layout_below="@+id/topToCenterLine"
         android:layout_width="match_parent"
         android:background="@color/colorGreen"
         android:layout_height="200dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:layout_alignTop="@+id/TextViewScore"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/TextViewScore"
+            android:text="分"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"/>
+        <RelativeLayout
+            android:id="@+id/showToFriendLayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/TextViewScore"
+            android:background="@drawable/corners_bg"
+            android:layout_width="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/showToFriendImage"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/center_show"/>
+            <TextView
+                android:layout_toRightOf="@+id/showToFriendImage"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/colorWhite"
+                android:text="@string/show_to_friend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/TextViewScore"
@@ -62,45 +110,42 @@
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
             android:text="100"
-            android:layout_centerInParent="true"
             android:fontFamily="sans-serif-smallcaps"
             android:textSize="100dp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorWhite"
-            android:layout_alignTop="@id/TextViewScore"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@id/TextViewScore"
-            android:text="分"
-            android:textSize="20dp"
-            android:layout_marginLeft="5dp"/>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
     </RelativeLayout>
 
     <!--底部-->
     <LinearLayout
+        android:id="@+id/bottomLinearLayout"
         android:background="@color/colorGrey"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
+
         <LinearLayout
+            android:id="@+id/bottomList1"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
+                android:id="@+id/bottomImageView1"
                 android:background="@color/colorGrey"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:src="@mipmap/bottom_1_on" />
             <TextView
+                android:id="@+id/bottomTextView1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/colorGreen"
@@ -108,19 +153,21 @@
                 android:text="常用功能" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/bottomList2"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
+                android:id="@+id/bottomImageView2"
                 android:background="@color/colorGrey"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="35dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:src="@mipmap/bottom_2_off" />
             <TextView
+                android:id="@+id/bottomTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/colorWhite"
@@ -128,19 +175,21 @@
                 android:text="软件管理" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/bottomList3"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
+                android:id="@+id/bottomImageView3"
                 android:background="@color/colorGrey"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="36dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:src="@mipmap/bottom_3_off" />
             <TextView
+                android:id="@+id/bottomTextView3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textColor="@color/colorWhite"
@@ -148,25 +197,42 @@
                 android:text="安全防护" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/bottomList4"
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <ImageButton
+            <ImageView
+                android:id="@+id/bottomImageView4"
                 android:background="@color/colorGrey"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="36dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginBottom="3dp"
                 android:src="@mipmap/bottom_4_off" />
             <TextView
+                android:id="@+id/bottomTextView4"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:textColor="@color/colorWhite"
                 android:layout_marginBottom="2dp"
                 android:text="隐私保护" />
         </LinearLayout>
     </LinearLayout>
+
+    <!--常用功能列表-->
+    <GridView
+        android:id="@+id/centerGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:numColumns="2"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"
+        android:layout_below="@+id/centerRelativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    </GridView>
+
 
 </RelativeLayout>
